@@ -1,4 +1,4 @@
-const DataUri = require("datauri");
+const DataUri = require("datauri/parser");
 const path = require("path");
 
 const dataURIChild = new DataUri();

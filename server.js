@@ -11,13 +11,14 @@ const userRoutes = require('./routes/userRoutes');
 const app = express();
 app.use(express.urlencoded({ extended : true }));
 app.use(express.json());
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-    allowedHeaders: ["Content-Type"]
-  })
-);
+app.use(cors(
+  {
+    "origin": "*",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "optionsSuccessStatus": 204
+  }
+));
 
 app.use(apiRoutes);
 app.use(userRoutes);

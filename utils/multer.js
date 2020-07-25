@@ -6,7 +6,7 @@ let multerConfig = multer({
         fileSize: 1024 * 1024 * 2
     },
     fileFilter: function(req, file, cb) {
-        if(file.mimetype === "image/*") {
+        if(file.mimetype === "image/jpeg" || file.mimetype === "image/png") {
             cb(null, true)
         } else {
             var newError = new Error("File type is incorrect");
