@@ -11,8 +11,8 @@ router.post("/user/favourites/:token", authenticate, addfavourites);
 
 router.delete("/user/delete/favourites/:token", authenticate, deletefavourites);
 
-router.get("/imageuploaders", authenticate, allimgupload);
+router.get("/imageuploaders/:token", authenticate, allimgupload);
 
-router.get("/user/imagesuploads", authenticate, getimgupload);
+router.get("/user/imagesuploads/:token", authenticate, getimgupload);
 
 module.exports = router;
