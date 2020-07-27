@@ -11,7 +11,7 @@ router.post("/user/favourites/:token", authenticate, addfavourites);
 
 router.delete("/user/delete/favourites/:token", authenticate, deletefavourites);
 
-router.get("/imageuploaders/:token", authenticate, allimgupload);
+router.get("/imageuploaders", allimgupload);
 
 router.get("/user/imagesuploads/:token", authenticate, getimgupload);
 
