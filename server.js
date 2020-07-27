@@ -9,17 +9,8 @@ const userRoutes = require('./routes/userRoutes');
 
 // Init
 const app = express();
-app.use(express.urlencoded({ extended : false }));
-app.use(express.json())
 app.use(express.json());
-app.use(cors(
-  {
-    "origin": "*",
-    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-    "preflightContinue": false,
-    "optionsSuccessStatus": 204
-  }
-));
+app.use(cors());
 
 app.use(apiRoutes);
 app.use(userRoutes);
