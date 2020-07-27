@@ -7,7 +7,7 @@ const {imgupload, addfavourites, deletefavourites, getimgupload, allimgupload} =
 
 router.post("/user/create/:token", authenticate, upload.single("file"), imgupload);
 
-router.post("/user/favourites/:token", authenticate, addfavourites);
+router.post("/user/favourites/:id&:token", authenticate, addfavourites);
 
 router.delete("/user/delete/favourites/:token", authenticate, deletefavourites);
 
